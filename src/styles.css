@@ -1,0 +1,103 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #17212b;
+  background: #f5f7fa;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: #f5f7fa; }
+button, input { font: inherit; }
+
+.app { max-width: 1440px; margin: 0 auto; padding: 28px 34px 30px; }
+
+.topbar {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  padding: 4px 0 24px; border-bottom: 1px solid #dfe4ea;
+}
+.eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .12em; color: #607080; }
+h1 { margin: 5px 0 3px; font-size: 30px; letter-spacing: -.02em; font-weight: 700; }
+.topbar p { margin: 0; color: #687585; font-size: 14px; }
+.header-right { display: flex; align-items: center; gap: 16px; padding-top: 8px; }
+.asset-id { font-weight: 700; color: #334155; }
+.online { color: #287a4c; font-size: 13px; font-weight: 600; }
+.online i, .status i, .health-state i { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #2d9b60; margin-right: 7px; }
+
+.sensor-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; padding: 18px 0; }
+.sensor-card, .panel {
+  background: #fff; border: 1px solid #e1e6eb; border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(30, 50, 70, .035);
+}
+.sensor-card { padding: 18px 18px 16px; }
+.sensor-label { color: #687585; font-size: 12px; font-weight: 600; }
+.sensor-value { margin: 9px 0 8px; font-size: 27px; font-weight: 700; color: #1b2733; }
+.sensor-value span { font-size: 12px; color: #7a8794; font-weight: 600; }
+.status { font-size: 11px; color: #287a4c; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+
+.main-grid { display: grid; grid-template-columns: 1.75fr .85fr; gap: 14px; }
+.content-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 14px; margin-top: 14px; }
+.panel { padding: 20px; }
+.panel-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 18px; }
+.panel-head h2 { margin: 0; font-size: 15px; font-weight: 700; color: #25313d; }
+.panel-head span { color: #7a8794; font-size: 11px; margin-top: 4px; }
+.tag { background: #edf5ff; color: #24639e !important; padding: 5px 8px; border-radius: 5px; font-weight: 700; font-size: 10px !important; letter-spacing: .04em; }
+.tag.neutral { background: #f0f2f4; color: #65717d !important; }
+
+.conveyor { height: 205px; display: flex; align-items: center; padding: 0 35px; }
+.motor { width: 92px; text-align: center; }
+.motor-body { width: 68px; height: 82px; margin: auto; display: grid; place-items: center; border: 2px solid #7a8794; border-radius: 8px; color: #51606e; font-weight: 800; background: #f8fafb; }
+.motor small, .roller-unit small { display: block; margin-top: 7px; color: #788492; font-size: 10px; }
+.belt { flex: 1; position: relative; height: 90px; }
+.belt-line { position: absolute; left: 0; right: 0; top: 43px; height: 34px; border: 2px solid #667482; border-radius: 20px; background: repeating-linear-gradient(90deg, #eef1f4 0 14px, #e2e6ea 14px 28px); }
+.roller { position: absolute; top: 28px; width: 18px; height: 64px; border: 2px solid #667482; border-radius: 50%; background: #fff; }
+.r1 { left: 28%; } .r2 { left: 52%; } .r3 { left: 76%; }
+.large-roller { width: 68px; height: 68px; border: 3px solid #536271; border-radius: 50%; background: #f7f9fb; }
+.roller-unit { width: 100px; text-align: center; }
+
+.twin-footer { display: flex; gap: 28px; border-top: 1px solid #edf0f3; padding-top: 14px; color: #788492; font-size: 11px; }
+.twin-footer b { color: #2c3b48; margin-left: 5px; }
+
+.health-score { font-size: 52px; font-weight: 750; letter-spacing: -.04em; color: #1d5fa7; }
+.health-score span { font-size: 15px; color: #8a95a1; margin-left: 4px; }
+.health-state { color: #2d7d50; font-weight: 700; font-size: 13px; margin: 5px 0 24px; }
+.health-bars > div { position: relative; margin-top: 13px; font-size: 11px; color: #697684; }
+.health-bars b { float: right; color: #33404d; }
+.health-bars em { display: block; height: 5px; margin-top: 7px; background: #3b8f65; border-radius: 4px; }
+.health-bars > div:nth-child(2) em { background: #d5a536; }
+.health-bars > div:nth-child(3) em { background: #bd6262; }
+
+.chart-panel { min-height: 315px; }
+.chart-legend { color: #4f6070 !important; }
+.chart-legend i { display:inline-block; width:18px; height:2px; background:#1d5fa7; vertical-align:middle; margin-right:6px; }
+
+.condition-status { display:inline-block; padding:7px 10px; border-radius:5px; background:#eaf5ee; color:#27774a; font-weight:800; font-size:11px; letter-spacing:.06em; }
+.condition-panel p { color:#687585; font-size:13px; line-height:1.6; }
+.condition-row, .maintenance-row { display:flex; justify-content:space-between; gap:18px; border-top:1px solid #edf0f3; padding:12px 0; font-size:12px; color:#74808c; }
+.condition-row b, .maintenance-row b { color:#33404d; text-align:right; }
+.muted { color:#7a8794 !important; }
+.prognostic-main { display:flex; gap:13px; align-items:center; }
+.prognostic-icon { width:38px; height:38px; border-radius:50%; display:grid; place-items:center; background:#eaf5ee; color:#2d7d50; font-weight:800; }
+.prognostic-main strong { font-size:13px; }
+.prognostic-main p { margin:4px 0 0; color:#7a8794; font-size:12px; }
+
+.events-panel { margin-top:14px; }
+.event { display:grid; grid-template-columns:75px 12px 1fr auto; gap:10px; align-items:center; border-top:1px solid #edf0f3; padding:12px 0; font-size:12px; }
+.event time { color:#8a95a1; }
+.event p { margin:0; color:#4f5d6a; }
+.event b { color:#2d7d50; font-size:11px; }
+.dot { width:7px; height:7px; border-radius:50%; }
+.green { background:#2d9b60; }
+
+footer { padding-top:20px; text-align:right; color:#9aa4ae; font-size:10px; }
+
+@media (max-width: 950px) {
+  .sensor-grid { grid-template-columns: repeat(2, 1fr); }
+  .main-grid, .content-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .app { padding: 20px 14px; }
+  .sensor-grid { grid-template-columns: 1fr; }
+  .topbar { flex-direction: column; gap: 14px; }
+  .header-right { padding-top: 0; }
+  .conveyor { padding: 0 5px; }
+}
