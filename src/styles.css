@@ -101,3 +101,35 @@ footer { padding-top:20px; text-align:right; color:#9aa4ae; font-size:10px; }
   .header-right { padding-top: 0; }
   .conveyor { padding: 0 5px; }
 }
+
+/* Phase 1 navigation refinement */
+.app { max-width: 1500px; display:flex; gap:0; padding:0; min-height:100vh; }
+.sidebar { width:218px; flex:0 0 218px; min-height:100vh; background:#fff; border-right:1px solid #e1e6eb; padding:25px 15px; display:flex; flex-direction:column; }
+.brand { display:flex; gap:10px; align-items:center; padding:0 8px 25px; border-bottom:1px solid #edf0f3; }
+.brand-mark { width:35px; height:35px; border:1px solid #cbd8e5; border-radius:7px; display:grid; place-items:center; color:#1d5fa7; font-size:12px; font-weight:800; }
+.brand strong { display:block; font-size:13px; color:#25313d; }
+.brand span { display:block; font-size:10px; color:#87929d; margin-top:3px; }
+nav { padding-top:20px; }
+.nav-item { width:100%; border:0; background:transparent; text-align:left; padding:11px 12px; margin-bottom:3px; border-radius:6px; color:#687585; font-size:12px; cursor:pointer; }
+.nav-item:hover, .nav-item.selected { background:#edf4fb; color:#1d5fa7; font-weight:700; }
+.sidebar-bottom { margin-top:auto; border-top:1px solid #edf0f3; padding:18px 9px 2px; }
+.small-label { display:block; color:#9aa4ae; font-size:9px; letter-spacing:.08em; margin-bottom:4px; }
+.sidebar-bottom strong { display:block; color:#33404d; font-size:13px; }
+.connection { display:block; margin-top:9px; font-size:9px; color:#9aa4ae; }
+.connection i { display:inline-block; width:6px; height:6px; border-radius:50%; background:#aeb6be; margin-right:5px; }
+.workspace { flex:1; min-width:0; padding:28px 34px 30px; }
+.sensor-card { border:1px solid #e1e6eb; cursor:pointer; text-align:left; color:inherit; }
+.sensor-card.active { border-color:#8db3d5; box-shadow:0 0 0 2px #edf4fb; }
+
+@media (max-width: 950px) {
+  .sidebar { width:72px; flex-basis:72px; padding:20px 8px; }
+  .brand { justify-content:center; padding-left:0; padding-right:0; border-bottom:0; }
+  .brand > div:last-child, .sidebar nav, .sidebar-bottom { display:none; }
+  .brand-mark { margin:auto; }
+  .workspace { padding:20px; }
+}
+@media (max-width: 560px) {
+  .app { display:block; }
+  .sidebar { display:none; }
+  .workspace { padding:20px 14px; }
+}
